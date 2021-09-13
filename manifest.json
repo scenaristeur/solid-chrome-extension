@@ -1,21 +1,37 @@
 {
-  "manifest_version": 2,
-  "name": "Solid Decentralized",
-  "description": "Solid Chrome Extension",
+  "name": "Getting Started Example",
+  "description": "Build an Extension!",
   "version": "1.0",
-  "permissions": [
-    "http://*/*",
-    "https://*/*",
-    "tabs"
-  ],
-  "browser_action": {
-    "default_icon": "img/icon.png",
-    "default_popup": "popup.html"
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/get_started16.png",
+      "32": "/images/get_started32.png",
+      "48": "/images/get_started48.png",
+      "128": "/images/get_started128.png"
+    }
   },
   "icons": {
-    "128": "img/icon_128.png"
+    "16": "/images/get_started16.png",
+    "32": "/images/get_started32.png",
+    "48": "/images/get_started48.png",
+    "128": "/images/get_started128.png"
   },
-  "background": {
-    "scripts": ["js/background.js"]
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens popup.html"
+    }
   }
+
+
 }

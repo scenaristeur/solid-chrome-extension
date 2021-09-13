@@ -1,4 +1,10 @@
-# solid-chrome-extension
+# Solid-chrome-extension
+https://developer.chrome.com/docs/extensions/mv3/getstarted/
 
-source https://grafikart.fr/tutoriels/extension-chrome-666
-dev doc https://developer.chrome.com/docs/extensions/mv3/content_scripts/
+# issue with chrome.scripting
+- https://stackoverflow.com/questions/65476451/cannot-read-property-executescript-of-undefined
+"permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+
+ou
+
+chrome.tabs.executeScript
